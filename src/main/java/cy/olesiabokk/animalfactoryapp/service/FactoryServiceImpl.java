@@ -1,24 +1,24 @@
 package cy.olesiabokk.animalfactoryapp.service;
 
 import cy.olesiabokk.animalfactoryapp.entity.Cat;
-import cy.olesiabokk.animalfactoryapp.entity.Factory;
+import cy.olesiabokk.animalfactoryapp.factory.CatFactory;
 import cy.olesiabokk.animalfactoryapp.service.interfaces.FactoryService;
 import cy.olesiabokk.animalfactoryapp.service.interfaces.SortService;
 
 import java.util.ArrayList;
 
 public class FactoryServiceImpl implements FactoryService {
-    private final Factory factory;
+    private final CatFactory catFactory;
     private SortService sortService;
 
     public FactoryServiceImpl(CatCreator catCreator) {
-        this.factory = Factory.getInstance(catCreator);
+        this.catFactory = CatFactory.getInstance(catCreator);
         this.sortService = new SortServiceImpl();
     }
 
     @Override
     public ArrayList<Cat> getCatsList() {
-        return factory.getCatsList();
+        return catFactory.getCatList();
     }
 
     @Override

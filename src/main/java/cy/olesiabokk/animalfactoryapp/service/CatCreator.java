@@ -27,7 +27,7 @@ public class CatCreator {
         return cat;
     }
 
-    public ArrayList<Cat> createCatsList() {
+    public ArrayList<Cat> createCatList() {
         ArrayList<Cat> cats = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             cats.add(createCat());
