@@ -11,15 +11,11 @@ public class Cat {
     private String color;
 
     public Cat(String name, int age, int weight, String color) {
-        this.id = createID();
+        this.id = counter.addAndGet(1);
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.color = color;
-    }
-
-    private static long createID() {
-        return counter.addAndGet(1);
     }
 
     public long getId() {
