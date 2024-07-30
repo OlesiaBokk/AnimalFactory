@@ -11,8 +11,8 @@ public class FactoryServiceImpl implements FactoryService {
     private final CatFactory catFactory;
     private SortService sortService;
 
-    public FactoryServiceImpl(CatCreator catCreator) {
-        this.catFactory = CatFactory.getInstance(catCreator);
+    public FactoryServiceImpl() {
+        this.catFactory = CatFactory.getInstance();
         this.sortService = new SortServiceImpl();
     }
 
